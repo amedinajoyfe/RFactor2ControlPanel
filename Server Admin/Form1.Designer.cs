@@ -34,6 +34,9 @@
             txtNameStation1 = new TextBox();
             btnSaveStation1 = new Button();
             gbStation1 = new GroupBox();
+            btnConnect1 = new Button();
+            btnAuto1 = new Button();
+            btnDrive1 = new Button();
             cbServer1 = new ComboBox();
             btnConnectStation1 = new Button();
             btnEndRace1 = new Button();
@@ -45,7 +48,10 @@
             label4 = new Label();
             btnEasyStation1 = new Button();
             gbStation2 = new GroupBox();
+            btnConnect2 = new Button();
+            btnAuto2 = new Button();
             cbServer2 = new ComboBox();
+            btnDrive2 = new Button();
             btnConnectStation2 = new Button();
             btnEndRace2 = new Button();
             btnManualStation2 = new Button();
@@ -60,7 +66,10 @@
             txtNameStation2 = new TextBox();
             lblStation2 = new Label();
             gbStation3 = new GroupBox();
+            btnConnect3 = new Button();
+            btnAuto3 = new Button();
             cbServer3 = new ComboBox();
+            btnDrive3 = new Button();
             btnConnectStation3 = new Button();
             btnEndRace3 = new Button();
             btnManualStation3 = new Button();
@@ -75,7 +84,10 @@
             txtNameStation3 = new TextBox();
             lblStation3 = new Label();
             gbStation4 = new GroupBox();
+            btnConnect4 = new Button();
+            btnAuto4 = new Button();
             cbServer4 = new ComboBox();
+            btnDrive4 = new Button();
             btnConnectStation4 = new Button();
             btnEndRace4 = new Button();
             btnManualStation4 = new Button();
@@ -90,6 +102,9 @@
             txtNameStation4 = new TextBox();
             lblStation4 = new Label();
             gbStation8 = new GroupBox();
+            btnConnect8 = new Button();
+            btnAuto8 = new Button();
+            btnDrive8 = new Button();
             cbServer8 = new ComboBox();
             btnConnectStation8 = new Button();
             btnEndRace8 = new Button();
@@ -105,6 +120,9 @@
             txtNameStation8 = new TextBox();
             lblStation8 = new Label();
             gbStation7 = new GroupBox();
+            btnConnect7 = new Button();
+            btnAuto7 = new Button();
+            btnDrive7 = new Button();
             cbServer7 = new ComboBox();
             btnConnectStation7 = new Button();
             btnEndRace7 = new Button();
@@ -122,6 +140,9 @@
             txtNameStation7 = new TextBox();
             lblStation7 = new Label();
             gbStation6 = new GroupBox();
+            btnConnect6 = new Button();
+            btnAuto6 = new Button();
+            btnDrive6 = new Button();
             cbServer6 = new ComboBox();
             btnConnectStation6 = new Button();
             btnEndRace6 = new Button();
@@ -137,6 +158,9 @@
             txtNameStation6 = new TextBox();
             lblStation6 = new Label();
             gbStation5 = new GroupBox();
+            btnConnect5 = new Button();
+            btnAuto5 = new Button();
+            btnDrive5 = new Button();
             cbServer5 = new ComboBox();
             btnConnectStation5 = new Button();
             btnEndRace5 = new Button();
@@ -153,6 +177,42 @@
             lblStation5 = new Label();
             lblTitle = new Label();
             label32 = new Label();
+            gbStation9 = new GroupBox();
+            btnConnect9 = new Button();
+            btnAuto9 = new Button();
+            btnDrive9 = new Button();
+            cbServer9 = new ComboBox();
+            btnConnectStation9 = new Button();
+            btnEndRace9 = new Button();
+            btnManualStation9 = new Button();
+            btnOptionsStation9 = new Button();
+            btnHardStation9 = new Button();
+            btnToggleState9 = new Button();
+            btnMediumStation9 = new Button();
+            label2 = new Label();
+            btnEasyStation9 = new Button();
+            btnSaveStation9 = new Button();
+            label7 = new Label();
+            txtNameStation9 = new TextBox();
+            lblStation9 = new Label();
+            label11 = new Label();
+            btnConnect1Global = new Button();
+            btnEndRace1Global = new Button();
+            btnEndRace2Global = new Button();
+            btnConnect2Global = new Button();
+            label15 = new Label();
+            btnEndRace3Global = new Button();
+            btnConnect3Global = new Button();
+            label19 = new Label();
+            btnEndRace4Global = new Button();
+            btnConnect4Global = new Button();
+            label23 = new Label();
+            btnEndRace5Global = new Button();
+            btnConnect5Global = new Button();
+            label27 = new Label();
+            btnEndRace6Global = new Button();
+            btnConnect6Global = new Button();
+            label31 = new Label();
             gbStation1.SuspendLayout();
             gbStation2.SuspendLayout();
             gbStation3.SuspendLayout();
@@ -161,6 +221,7 @@
             gbStation7.SuspendLayout();
             gbStation6.SuspendLayout();
             gbStation5.SuspendLayout();
+            gbStation9.SuspendLayout();
             SuspendLayout();
             // 
             // lblStation1
@@ -196,7 +257,7 @@
             // btnSaveStation1
             // 
             btnSaveStation1.Font = new Font("Segoe UI", 10F);
-            btnSaveStation1.Location = new Point(8, 170);
+            btnSaveStation1.Location = new Point(8, 146);
             btnSaveStation1.Name = "btnSaveStation1";
             btnSaveStation1.Size = new Size(83, 30);
             btnSaveStation1.TabIndex = 14;
@@ -206,6 +267,9 @@
             // 
             // gbStation1
             // 
+            gbStation1.Controls.Add(btnConnect1);
+            gbStation1.Controls.Add(btnAuto1);
+            gbStation1.Controls.Add(btnDrive1);
             gbStation1.Controls.Add(cbServer1);
             gbStation1.Controls.Add(btnConnectStation1);
             gbStation1.Controls.Add(btnEndRace1);
@@ -220,11 +284,44 @@
             gbStation1.Controls.Add(label3);
             gbStation1.Controls.Add(txtNameStation1);
             gbStation1.Controls.Add(lblStation1);
-            gbStation1.Location = new Point(12, 105);
+            gbStation1.Location = new Point(12, 71);
             gbStation1.Name = "gbStation1";
             gbStation1.Size = new Size(258, 224);
             gbStation1.TabIndex = 15;
             gbStation1.TabStop = false;
+            // 
+            // btnConnect1
+            // 
+            btnConnect1.Font = new Font("Segoe UI", 10F);
+            btnConnect1.Location = new Point(8, 182);
+            btnConnect1.Name = "btnConnect1";
+            btnConnect1.Size = new Size(83, 30);
+            btnConnect1.TabIndex = 71;
+            btnConnect1.Text = "CONNECT";
+            btnConnect1.UseVisualStyleBackColor = true;
+            btnConnect1.Click += btnConnect1_Click;
+            // 
+            // btnAuto1
+            // 
+            btnAuto1.Font = new Font("Segoe UI", 10F);
+            btnAuto1.Location = new Point(170, 182);
+            btnAuto1.Name = "btnAuto1";
+            btnAuto1.Size = new Size(82, 30);
+            btnAuto1.TabIndex = 70;
+            btnAuto1.Text = "AUTO";
+            btnAuto1.UseVisualStyleBackColor = true;
+            btnAuto1.Click += btnAuto1_Click;
+            // 
+            // btnDrive1
+            // 
+            btnDrive1.Font = new Font("Segoe UI", 10F);
+            btnDrive1.Location = new Point(99, 182);
+            btnDrive1.Name = "btnDrive1";
+            btnDrive1.Size = new Size(65, 30);
+            btnDrive1.TabIndex = 69;
+            btnDrive1.Text = "DRIVE";
+            btnDrive1.UseVisualStyleBackColor = true;
+            btnDrive1.Click += btnDrive1_Click;
             // 
             // cbServer1
             // 
@@ -237,7 +334,7 @@
             // btnConnectStation1
             // 
             btnConnectStation1.Font = new Font("Segoe UI", 10F);
-            btnConnectStation1.Location = new Point(170, 170);
+            btnConnectStation1.Location = new Point(170, 146);
             btnConnectStation1.Name = "btnConnectStation1";
             btnConnectStation1.Size = new Size(83, 30);
             btnConnectStation1.TabIndex = 61;
@@ -249,7 +346,7 @@
             // 
             btnEndRace1.BackColor = Color.White;
             btnEndRace1.BackgroundImage = (Image)resources.GetObject("btnEndRace1.BackgroundImage");
-            btnEndRace1.Location = new Point(100, 170);
+            btnEndRace1.Location = new Point(99, 146);
             btnEndRace1.Name = "btnEndRace1";
             btnEndRace1.Size = new Size(30, 30);
             btnEndRace1.TabIndex = 60;
@@ -270,7 +367,7 @@
             // 
             btnOptionsStation1.Font = new Font("Segoe UI", 10F);
             btnOptionsStation1.Image = (Image)resources.GetObject("btnOptionsStation1.Image");
-            btnOptionsStation1.Location = new Point(135, 170);
+            btnOptionsStation1.Location = new Point(134, 146);
             btnOptionsStation1.Name = "btnOptionsStation1";
             btnOptionsStation1.Size = new Size(30, 30);
             btnOptionsStation1.TabIndex = 18;
@@ -331,7 +428,10 @@
             // 
             // gbStation2
             // 
+            gbStation2.Controls.Add(btnConnect2);
+            gbStation2.Controls.Add(btnAuto2);
             gbStation2.Controls.Add(cbServer2);
+            gbStation2.Controls.Add(btnDrive2);
             gbStation2.Controls.Add(btnConnectStation2);
             gbStation2.Controls.Add(btnEndRace2);
             gbStation2.Controls.Add(btnManualStation2);
@@ -345,11 +445,33 @@
             gbStation2.Controls.Add(label6);
             gbStation2.Controls.Add(txtNameStation2);
             gbStation2.Controls.Add(lblStation2);
-            gbStation2.Location = new Point(276, 105);
+            gbStation2.Location = new Point(540, 71);
             gbStation2.Name = "gbStation2";
             gbStation2.Size = new Size(258, 224);
             gbStation2.TabIndex = 17;
             gbStation2.TabStop = false;
+            // 
+            // btnConnect2
+            // 
+            btnConnect2.Font = new Font("Segoe UI", 10F);
+            btnConnect2.Location = new Point(8, 182);
+            btnConnect2.Name = "btnConnect2";
+            btnConnect2.Size = new Size(83, 30);
+            btnConnect2.TabIndex = 75;
+            btnConnect2.Text = "CONNECT";
+            btnConnect2.UseVisualStyleBackColor = true;
+            btnConnect2.Click += btnConnect2_Click;
+            // 
+            // btnAuto2
+            // 
+            btnAuto2.Font = new Font("Segoe UI", 10F);
+            btnAuto2.Location = new Point(170, 182);
+            btnAuto2.Name = "btnAuto2";
+            btnAuto2.Size = new Size(83, 30);
+            btnAuto2.TabIndex = 74;
+            btnAuto2.Text = "AUTO";
+            btnAuto2.UseVisualStyleBackColor = true;
+            btnAuto2.Click += btnAuto2_Click;
             // 
             // cbServer2
             // 
@@ -359,10 +481,21 @@
             cbServer2.Size = new Size(150, 23);
             cbServer2.TabIndex = 62;
             // 
+            // btnDrive2
+            // 
+            btnDrive2.Font = new Font("Segoe UI", 10F);
+            btnDrive2.Location = new Point(99, 182);
+            btnDrive2.Name = "btnDrive2";
+            btnDrive2.Size = new Size(65, 30);
+            btnDrive2.TabIndex = 73;
+            btnDrive2.Text = "DRIVE";
+            btnDrive2.UseVisualStyleBackColor = true;
+            btnDrive2.Click += btnDrive2_Click;
+            // 
             // btnConnectStation2
             // 
             btnConnectStation2.Font = new Font("Segoe UI", 10F);
-            btnConnectStation2.Location = new Point(170, 170);
+            btnConnectStation2.Location = new Point(170, 146);
             btnConnectStation2.Name = "btnConnectStation2";
             btnConnectStation2.Size = new Size(83, 30);
             btnConnectStation2.TabIndex = 68;
@@ -374,7 +507,7 @@
             // 
             btnEndRace2.BackColor = Color.White;
             btnEndRace2.BackgroundImage = (Image)resources.GetObject("btnEndRace2.BackgroundImage");
-            btnEndRace2.Location = new Point(100, 170);
+            btnEndRace2.Location = new Point(99, 146);
             btnEndRace2.Name = "btnEndRace2";
             btnEndRace2.Size = new Size(30, 30);
             btnEndRace2.TabIndex = 61;
@@ -395,7 +528,7 @@
             // 
             btnOptionsStation2.Font = new Font("Segoe UI", 10F);
             btnOptionsStation2.Image = (Image)resources.GetObject("btnOptionsStation2.Image");
-            btnOptionsStation2.Location = new Point(135, 170);
+            btnOptionsStation2.Location = new Point(134, 146);
             btnOptionsStation2.Name = "btnOptionsStation2";
             btnOptionsStation2.Size = new Size(30, 30);
             btnOptionsStation2.TabIndex = 23;
@@ -457,7 +590,7 @@
             // btnSaveStation2
             // 
             btnSaveStation2.Font = new Font("Segoe UI", 10F);
-            btnSaveStation2.Location = new Point(8, 170);
+            btnSaveStation2.Location = new Point(8, 146);
             btnSaveStation2.Name = "btnSaveStation2";
             btnSaveStation2.Size = new Size(83, 30);
             btnSaveStation2.TabIndex = 14;
@@ -498,7 +631,10 @@
             // 
             // gbStation3
             // 
+            gbStation3.Controls.Add(btnConnect3);
+            gbStation3.Controls.Add(btnAuto3);
             gbStation3.Controls.Add(cbServer3);
+            gbStation3.Controls.Add(btnDrive3);
             gbStation3.Controls.Add(btnConnectStation3);
             gbStation3.Controls.Add(btnEndRace3);
             gbStation3.Controls.Add(btnManualStation3);
@@ -512,11 +648,33 @@
             gbStation3.Controls.Add(label10);
             gbStation3.Controls.Add(txtNameStation3);
             gbStation3.Controls.Add(lblStation3);
-            gbStation3.Location = new Point(540, 105);
+            gbStation3.Location = new Point(33, 301);
             gbStation3.Name = "gbStation3";
             gbStation3.Size = new Size(258, 224);
             gbStation3.TabIndex = 18;
             gbStation3.TabStop = false;
+            // 
+            // btnConnect3
+            // 
+            btnConnect3.Font = new Font("Segoe UI", 10F);
+            btnConnect3.Location = new Point(8, 182);
+            btnConnect3.Name = "btnConnect3";
+            btnConnect3.Size = new Size(83, 30);
+            btnConnect3.TabIndex = 79;
+            btnConnect3.Text = "CONNECT";
+            btnConnect3.UseVisualStyleBackColor = true;
+            btnConnect3.Click += btnConnect3_Click;
+            // 
+            // btnAuto3
+            // 
+            btnAuto3.Font = new Font("Segoe UI", 10F);
+            btnAuto3.Location = new Point(170, 182);
+            btnAuto3.Name = "btnAuto3";
+            btnAuto3.Size = new Size(82, 30);
+            btnAuto3.TabIndex = 78;
+            btnAuto3.Text = "AUTO";
+            btnAuto3.UseVisualStyleBackColor = true;
+            btnAuto3.Click += btnAuto3_Click;
             // 
             // cbServer3
             // 
@@ -526,10 +684,21 @@
             cbServer3.Size = new Size(150, 23);
             cbServer3.TabIndex = 69;
             // 
+            // btnDrive3
+            // 
+            btnDrive3.Font = new Font("Segoe UI", 10F);
+            btnDrive3.Location = new Point(99, 182);
+            btnDrive3.Name = "btnDrive3";
+            btnDrive3.Size = new Size(65, 30);
+            btnDrive3.TabIndex = 77;
+            btnDrive3.Text = "DRIVE";
+            btnDrive3.UseVisualStyleBackColor = true;
+            btnDrive3.Click += btnDrive3_Click;
+            // 
             // btnConnectStation3
             // 
             btnConnectStation3.Font = new Font("Segoe UI", 10F);
-            btnConnectStation3.Location = new Point(170, 170);
+            btnConnectStation3.Location = new Point(170, 146);
             btnConnectStation3.Name = "btnConnectStation3";
             btnConnectStation3.Size = new Size(83, 30);
             btnConnectStation3.TabIndex = 70;
@@ -541,7 +710,7 @@
             // 
             btnEndRace3.BackColor = Color.White;
             btnEndRace3.BackgroundImage = (Image)resources.GetObject("btnEndRace3.BackgroundImage");
-            btnEndRace3.Location = new Point(100, 170);
+            btnEndRace3.Location = new Point(99, 146);
             btnEndRace3.Name = "btnEndRace3";
             btnEndRace3.Size = new Size(30, 30);
             btnEndRace3.TabIndex = 62;
@@ -562,7 +731,7 @@
             // 
             btnOptionsStation3.Font = new Font("Segoe UI", 10F);
             btnOptionsStation3.Image = (Image)resources.GetObject("btnOptionsStation3.Image");
-            btnOptionsStation3.Location = new Point(135, 170);
+            btnOptionsStation3.Location = new Point(134, 146);
             btnOptionsStation3.Name = "btnOptionsStation3";
             btnOptionsStation3.Size = new Size(30, 30);
             btnOptionsStation3.TabIndex = 27;
@@ -624,7 +793,7 @@
             // btnSaveStation3
             // 
             btnSaveStation3.Font = new Font("Segoe UI", 10F);
-            btnSaveStation3.Location = new Point(8, 170);
+            btnSaveStation3.Location = new Point(8, 146);
             btnSaveStation3.Name = "btnSaveStation3";
             btnSaveStation3.Size = new Size(83, 30);
             btnSaveStation3.TabIndex = 14;
@@ -664,7 +833,10 @@
             // 
             // gbStation4
             // 
+            gbStation4.Controls.Add(btnConnect4);
+            gbStation4.Controls.Add(btnAuto4);
             gbStation4.Controls.Add(cbServer4);
+            gbStation4.Controls.Add(btnDrive4);
             gbStation4.Controls.Add(btnConnectStation4);
             gbStation4.Controls.Add(btnEndRace4);
             gbStation4.Controls.Add(btnManualStation4);
@@ -678,11 +850,33 @@
             gbStation4.Controls.Add(label14);
             gbStation4.Controls.Add(txtNameStation4);
             gbStation4.Controls.Add(lblStation4);
-            gbStation4.Location = new Point(804, 105);
+            gbStation4.Location = new Point(513, 301);
             gbStation4.Name = "gbStation4";
             gbStation4.Size = new Size(258, 224);
             gbStation4.TabIndex = 18;
             gbStation4.TabStop = false;
+            // 
+            // btnConnect4
+            // 
+            btnConnect4.Font = new Font("Segoe UI", 10F);
+            btnConnect4.Location = new Point(8, 182);
+            btnConnect4.Name = "btnConnect4";
+            btnConnect4.Size = new Size(83, 30);
+            btnConnect4.TabIndex = 77;
+            btnConnect4.Text = "CONNECT";
+            btnConnect4.UseVisualStyleBackColor = true;
+            btnConnect4.Click += btnConnect4_Click;
+            // 
+            // btnAuto4
+            // 
+            btnAuto4.Font = new Font("Segoe UI", 10F);
+            btnAuto4.Location = new Point(170, 182);
+            btnAuto4.Name = "btnAuto4";
+            btnAuto4.Size = new Size(82, 30);
+            btnAuto4.TabIndex = 76;
+            btnAuto4.Text = "AUTO";
+            btnAuto4.UseVisualStyleBackColor = true;
+            btnAuto4.Click += btnAuto4_Click;
             // 
             // cbServer4
             // 
@@ -692,10 +886,21 @@
             cbServer4.Size = new Size(150, 23);
             cbServer4.TabIndex = 26;
             // 
+            // btnDrive4
+            // 
+            btnDrive4.Font = new Font("Segoe UI", 10F);
+            btnDrive4.Location = new Point(99, 182);
+            btnDrive4.Name = "btnDrive4";
+            btnDrive4.Size = new Size(65, 30);
+            btnDrive4.TabIndex = 75;
+            btnDrive4.Text = "DRIVE";
+            btnDrive4.UseVisualStyleBackColor = true;
+            btnDrive4.Click += btnDrive4_Click;
+            // 
             // btnConnectStation4
             // 
             btnConnectStation4.Font = new Font("Segoe UI", 10F);
-            btnConnectStation4.Location = new Point(170, 170);
+            btnConnectStation4.Location = new Point(170, 146);
             btnConnectStation4.Name = "btnConnectStation4";
             btnConnectStation4.Size = new Size(83, 30);
             btnConnectStation4.TabIndex = 62;
@@ -707,7 +912,7 @@
             // 
             btnEndRace4.BackColor = Color.White;
             btnEndRace4.BackgroundImage = (Image)resources.GetObject("btnEndRace4.BackgroundImage");
-            btnEndRace4.Location = new Point(100, 170);
+            btnEndRace4.Location = new Point(99, 146);
             btnEndRace4.Name = "btnEndRace4";
             btnEndRace4.Size = new Size(30, 30);
             btnEndRace4.TabIndex = 63;
@@ -728,7 +933,7 @@
             // 
             btnOptionsStation4.Font = new Font("Segoe UI", 10F);
             btnOptionsStation4.Image = (Image)resources.GetObject("btnOptionsStation4.Image");
-            btnOptionsStation4.Location = new Point(135, 170);
+            btnOptionsStation4.Location = new Point(134, 146);
             btnOptionsStation4.Name = "btnOptionsStation4";
             btnOptionsStation4.Size = new Size(30, 30);
             btnOptionsStation4.TabIndex = 26;
@@ -790,7 +995,7 @@
             // btnSaveStation4
             // 
             btnSaveStation4.Font = new Font("Segoe UI", 10F);
-            btnSaveStation4.Location = new Point(8, 170);
+            btnSaveStation4.Location = new Point(8, 146);
             btnSaveStation4.Name = "btnSaveStation4";
             btnSaveStation4.Size = new Size(83, 30);
             btnSaveStation4.TabIndex = 14;
@@ -830,6 +1035,9 @@
             // 
             // gbStation8
             // 
+            gbStation8.Controls.Add(btnConnect8);
+            gbStation8.Controls.Add(btnAuto8);
+            gbStation8.Controls.Add(btnDrive8);
             gbStation8.Controls.Add(cbServer8);
             gbStation8.Controls.Add(btnConnectStation8);
             gbStation8.Controls.Add(btnEndRace8);
@@ -844,11 +1052,44 @@
             gbStation8.Controls.Add(label18);
             gbStation8.Controls.Add(txtNameStation8);
             gbStation8.Controls.Add(lblStation8);
-            gbStation8.Location = new Point(804, 333);
+            gbStation8.Location = new Point(513, 763);
             gbStation8.Name = "gbStation8";
             gbStation8.Size = new Size(258, 224);
             gbStation8.TabIndex = 21;
             gbStation8.TabStop = false;
+            // 
+            // btnConnect8
+            // 
+            btnConnect8.Font = new Font("Segoe UI", 10F);
+            btnConnect8.Location = new Point(8, 182);
+            btnConnect8.Name = "btnConnect8";
+            btnConnect8.Size = new Size(83, 30);
+            btnConnect8.TabIndex = 73;
+            btnConnect8.Text = "CONNECT";
+            btnConnect8.UseVisualStyleBackColor = true;
+            btnConnect8.Click += btnConnect8_Click;
+            // 
+            // btnAuto8
+            // 
+            btnAuto8.Font = new Font("Segoe UI", 10F);
+            btnAuto8.Location = new Point(170, 182);
+            btnAuto8.Name = "btnAuto8";
+            btnAuto8.Size = new Size(83, 30);
+            btnAuto8.TabIndex = 72;
+            btnAuto8.Text = "AUTO";
+            btnAuto8.UseVisualStyleBackColor = true;
+            btnAuto8.Click += btnAuto8_Click;
+            // 
+            // btnDrive8
+            // 
+            btnDrive8.Font = new Font("Segoe UI", 10F);
+            btnDrive8.Location = new Point(99, 182);
+            btnDrive8.Name = "btnDrive8";
+            btnDrive8.Size = new Size(65, 30);
+            btnDrive8.TabIndex = 71;
+            btnDrive8.Text = "DRIVE";
+            btnDrive8.UseVisualStyleBackColor = true;
+            btnDrive8.Click += btnDrive8_Click;
             // 
             // cbServer8
             // 
@@ -861,7 +1102,7 @@
             // btnConnectStation8
             // 
             btnConnectStation8.Font = new Font("Segoe UI", 10F);
-            btnConnectStation8.Location = new Point(170, 170);
+            btnConnectStation8.Location = new Point(170, 146);
             btnConnectStation8.Name = "btnConnectStation8";
             btnConnectStation8.Size = new Size(83, 30);
             btnConnectStation8.TabIndex = 62;
@@ -873,7 +1114,7 @@
             // 
             btnEndRace8.BackColor = Color.White;
             btnEndRace8.BackgroundImage = (Image)resources.GetObject("btnEndRace8.BackgroundImage");
-            btnEndRace8.Location = new Point(100, 170);
+            btnEndRace8.Location = new Point(99, 146);
             btnEndRace8.Name = "btnEndRace8";
             btnEndRace8.Size = new Size(30, 30);
             btnEndRace8.TabIndex = 64;
@@ -894,7 +1135,7 @@
             // 
             btnOptionsStation8.Font = new Font("Segoe UI", 10F);
             btnOptionsStation8.Image = (Image)resources.GetObject("btnOptionsStation8.Image");
-            btnOptionsStation8.Location = new Point(135, 170);
+            btnOptionsStation8.Location = new Point(134, 146);
             btnOptionsStation8.Name = "btnOptionsStation8";
             btnOptionsStation8.Size = new Size(30, 30);
             btnOptionsStation8.TabIndex = 25;
@@ -956,7 +1197,7 @@
             // btnSaveStation8
             // 
             btnSaveStation8.Font = new Font("Segoe UI", 10F);
-            btnSaveStation8.Location = new Point(8, 170);
+            btnSaveStation8.Location = new Point(8, 146);
             btnSaveStation8.Name = "btnSaveStation8";
             btnSaveStation8.Size = new Size(83, 30);
             btnSaveStation8.TabIndex = 14;
@@ -996,6 +1237,9 @@
             // 
             // gbStation7
             // 
+            gbStation7.Controls.Add(btnConnect7);
+            gbStation7.Controls.Add(btnAuto7);
+            gbStation7.Controls.Add(btnDrive7);
             gbStation7.Controls.Add(cbServer7);
             gbStation7.Controls.Add(btnConnectStation7);
             gbStation7.Controls.Add(btnEndRace7);
@@ -1012,11 +1256,44 @@
             gbStation7.Controls.Add(label22);
             gbStation7.Controls.Add(txtNameStation7);
             gbStation7.Controls.Add(lblStation7);
-            gbStation7.Location = new Point(540, 333);
+            gbStation7.Location = new Point(33, 763);
             gbStation7.Name = "gbStation7";
             gbStation7.Size = new Size(258, 224);
             gbStation7.TabIndex = 22;
             gbStation7.TabStop = false;
+            // 
+            // btnConnect7
+            // 
+            btnConnect7.Font = new Font("Segoe UI", 10F);
+            btnConnect7.Location = new Point(8, 182);
+            btnConnect7.Name = "btnConnect7";
+            btnConnect7.Size = new Size(83, 30);
+            btnConnect7.TabIndex = 74;
+            btnConnect7.Text = "CONNECT";
+            btnConnect7.UseVisualStyleBackColor = true;
+            btnConnect7.Click += btnConnect7_Click;
+            // 
+            // btnAuto7
+            // 
+            btnAuto7.Font = new Font("Segoe UI", 10F);
+            btnAuto7.Location = new Point(170, 182);
+            btnAuto7.Name = "btnAuto7";
+            btnAuto7.Size = new Size(83, 30);
+            btnAuto7.TabIndex = 73;
+            btnAuto7.Text = "AUTO";
+            btnAuto7.UseVisualStyleBackColor = true;
+            btnAuto7.Click += btnAuto7_Click;
+            // 
+            // btnDrive7
+            // 
+            btnDrive7.Font = new Font("Segoe UI", 10F);
+            btnDrive7.Location = new Point(99, 182);
+            btnDrive7.Name = "btnDrive7";
+            btnDrive7.Size = new Size(65, 30);
+            btnDrive7.TabIndex = 72;
+            btnDrive7.Text = "DRIVE";
+            btnDrive7.UseVisualStyleBackColor = true;
+            btnDrive7.Click += btnDrive7_Click;
             // 
             // cbServer7
             // 
@@ -1029,7 +1306,7 @@
             // btnConnectStation7
             // 
             btnConnectStation7.Font = new Font("Segoe UI", 10F);
-            btnConnectStation7.Location = new Point(170, 170);
+            btnConnectStation7.Location = new Point(170, 146);
             btnConnectStation7.Name = "btnConnectStation7";
             btnConnectStation7.Size = new Size(83, 30);
             btnConnectStation7.TabIndex = 62;
@@ -1041,7 +1318,7 @@
             // 
             btnEndRace7.BackColor = Color.White;
             btnEndRace7.BackgroundImage = (Image)resources.GetObject("btnEndRace7.BackgroundImage");
-            btnEndRace7.Location = new Point(100, 170);
+            btnEndRace7.Location = new Point(99, 146);
             btnEndRace7.Name = "btnEndRace7";
             btnEndRace7.Size = new Size(30, 30);
             btnEndRace7.TabIndex = 65;
@@ -1062,7 +1339,7 @@
             // 
             btnOptionsStation7.Font = new Font("Segoe UI", 10F);
             btnOptionsStation7.Image = (Image)resources.GetObject("btnOptionsStation7.Image");
-            btnOptionsStation7.Location = new Point(135, 170);
+            btnOptionsStation7.Location = new Point(134, 146);
             btnOptionsStation7.Name = "btnOptionsStation7";
             btnOptionsStation7.Size = new Size(30, 30);
             btnOptionsStation7.TabIndex = 28;
@@ -1135,7 +1412,7 @@
             // btnSaveStation7
             // 
             btnSaveStation7.Font = new Font("Segoe UI", 10F);
-            btnSaveStation7.Location = new Point(8, 170);
+            btnSaveStation7.Location = new Point(8, 146);
             btnSaveStation7.Name = "btnSaveStation7";
             btnSaveStation7.Size = new Size(83, 30);
             btnSaveStation7.TabIndex = 14;
@@ -1186,6 +1463,9 @@
             // 
             // gbStation6
             // 
+            gbStation6.Controls.Add(btnConnect6);
+            gbStation6.Controls.Add(btnAuto6);
+            gbStation6.Controls.Add(btnDrive6);
             gbStation6.Controls.Add(cbServer6);
             gbStation6.Controls.Add(btnConnectStation6);
             gbStation6.Controls.Add(btnEndRace6);
@@ -1200,11 +1480,44 @@
             gbStation6.Controls.Add(label26);
             gbStation6.Controls.Add(txtNameStation6);
             gbStation6.Controls.Add(lblStation6);
-            gbStation6.Location = new Point(276, 333);
+            gbStation6.Location = new Point(513, 531);
             gbStation6.Name = "gbStation6";
             gbStation6.Size = new Size(258, 224);
             gbStation6.TabIndex = 20;
             gbStation6.TabStop = false;
+            // 
+            // btnConnect6
+            // 
+            btnConnect6.Font = new Font("Segoe UI", 10F);
+            btnConnect6.Location = new Point(8, 182);
+            btnConnect6.Name = "btnConnect6";
+            btnConnect6.Size = new Size(83, 30);
+            btnConnect6.TabIndex = 76;
+            btnConnect6.Text = "CONNECT";
+            btnConnect6.UseVisualStyleBackColor = true;
+            btnConnect6.Click += btnConnect6_Click;
+            // 
+            // btnAuto6
+            // 
+            btnAuto6.Font = new Font("Segoe UI", 10F);
+            btnAuto6.Location = new Point(170, 182);
+            btnAuto6.Name = "btnAuto6";
+            btnAuto6.Size = new Size(83, 30);
+            btnAuto6.TabIndex = 75;
+            btnAuto6.Text = "AUTO";
+            btnAuto6.UseVisualStyleBackColor = true;
+            btnAuto6.Click += btnAuto6_Click;
+            // 
+            // btnDrive6
+            // 
+            btnDrive6.Font = new Font("Segoe UI", 10F);
+            btnDrive6.Location = new Point(99, 182);
+            btnDrive6.Name = "btnDrive6";
+            btnDrive6.Size = new Size(65, 30);
+            btnDrive6.TabIndex = 74;
+            btnDrive6.Text = "DRIVE";
+            btnDrive6.UseVisualStyleBackColor = true;
+            btnDrive6.Click += btnDrive6_Click;
             // 
             // cbServer6
             // 
@@ -1217,7 +1530,7 @@
             // btnConnectStation6
             // 
             btnConnectStation6.Font = new Font("Segoe UI", 10F);
-            btnConnectStation6.Location = new Point(170, 170);
+            btnConnectStation6.Location = new Point(170, 146);
             btnConnectStation6.Name = "btnConnectStation6";
             btnConnectStation6.Size = new Size(83, 30);
             btnConnectStation6.TabIndex = 69;
@@ -1229,7 +1542,7 @@
             // 
             btnEndRace6.BackColor = Color.White;
             btnEndRace6.BackgroundImage = (Image)resources.GetObject("btnEndRace6.BackgroundImage");
-            btnEndRace6.Location = new Point(100, 170);
+            btnEndRace6.Location = new Point(99, 146);
             btnEndRace6.Name = "btnEndRace6";
             btnEndRace6.Size = new Size(30, 30);
             btnEndRace6.TabIndex = 66;
@@ -1250,7 +1563,7 @@
             // 
             btnOptionsStation6.Font = new Font("Segoe UI", 10F);
             btnOptionsStation6.Image = (Image)resources.GetObject("btnOptionsStation6.Image");
-            btnOptionsStation6.Location = new Point(135, 170);
+            btnOptionsStation6.Location = new Point(134, 146);
             btnOptionsStation6.Name = "btnOptionsStation6";
             btnOptionsStation6.Size = new Size(30, 30);
             btnOptionsStation6.TabIndex = 22;
@@ -1312,7 +1625,7 @@
             // btnSaveStation6
             // 
             btnSaveStation6.Font = new Font("Segoe UI", 10F);
-            btnSaveStation6.Location = new Point(8, 170);
+            btnSaveStation6.Location = new Point(8, 146);
             btnSaveStation6.Name = "btnSaveStation6";
             btnSaveStation6.Size = new Size(83, 30);
             btnSaveStation6.TabIndex = 14;
@@ -1352,6 +1665,9 @@
             // 
             // gbStation5
             // 
+            gbStation5.Controls.Add(btnConnect5);
+            gbStation5.Controls.Add(btnAuto5);
+            gbStation5.Controls.Add(btnDrive5);
             gbStation5.Controls.Add(cbServer5);
             gbStation5.Controls.Add(btnConnectStation5);
             gbStation5.Controls.Add(btnEndRace5);
@@ -1366,11 +1682,44 @@
             gbStation5.Controls.Add(label30);
             gbStation5.Controls.Add(txtNameStation5);
             gbStation5.Controls.Add(lblStation5);
-            gbStation5.Location = new Point(12, 333);
+            gbStation5.Location = new Point(33, 531);
             gbStation5.Name = "gbStation5";
             gbStation5.Size = new Size(258, 224);
             gbStation5.TabIndex = 19;
             gbStation5.TabStop = false;
+            // 
+            // btnConnect5
+            // 
+            btnConnect5.Font = new Font("Segoe UI", 10F);
+            btnConnect5.Location = new Point(8, 182);
+            btnConnect5.Name = "btnConnect5";
+            btnConnect5.Size = new Size(83, 30);
+            btnConnect5.TabIndex = 78;
+            btnConnect5.Text = "CONNECT";
+            btnConnect5.UseVisualStyleBackColor = true;
+            btnConnect5.Click += btnConnect5_Click;
+            // 
+            // btnAuto5
+            // 
+            btnAuto5.Font = new Font("Segoe UI", 10F);
+            btnAuto5.Location = new Point(170, 182);
+            btnAuto5.Name = "btnAuto5";
+            btnAuto5.Size = new Size(82, 30);
+            btnAuto5.TabIndex = 77;
+            btnAuto5.Text = "AUTO";
+            btnAuto5.UseVisualStyleBackColor = true;
+            btnAuto5.Click += btnAuto5_Click;
+            // 
+            // btnDrive5
+            // 
+            btnDrive5.Font = new Font("Segoe UI", 10F);
+            btnDrive5.Location = new Point(99, 182);
+            btnDrive5.Name = "btnDrive5";
+            btnDrive5.Size = new Size(65, 30);
+            btnDrive5.TabIndex = 76;
+            btnDrive5.Text = "DRIVE";
+            btnDrive5.UseVisualStyleBackColor = true;
+            btnDrive5.Click += btnDrive5_Click;
             // 
             // cbServer5
             // 
@@ -1383,7 +1732,7 @@
             // btnConnectStation5
             // 
             btnConnectStation5.Font = new Font("Segoe UI", 10F);
-            btnConnectStation5.Location = new Point(170, 170);
+            btnConnectStation5.Location = new Point(170, 146);
             btnConnectStation5.Name = "btnConnectStation5";
             btnConnectStation5.Size = new Size(83, 30);
             btnConnectStation5.TabIndex = 62;
@@ -1395,7 +1744,7 @@
             // 
             btnEndRace5.BackColor = Color.White;
             btnEndRace5.BackgroundImage = (Image)resources.GetObject("btnEndRace5.BackgroundImage");
-            btnEndRace5.Location = new Point(100, 170);
+            btnEndRace5.Location = new Point(99, 146);
             btnEndRace5.Name = "btnEndRace5";
             btnEndRace5.Size = new Size(30, 30);
             btnEndRace5.TabIndex = 67;
@@ -1446,7 +1795,7 @@
             // 
             btnOptionsStation5.Font = new Font("Segoe UI", 10F);
             btnOptionsStation5.Image = (Image)resources.GetObject("btnOptionsStation5.Image");
-            btnOptionsStation5.Location = new Point(135, 170);
+            btnOptionsStation5.Location = new Point(134, 146);
             btnOptionsStation5.Name = "btnOptionsStation5";
             btnOptionsStation5.Size = new Size(30, 30);
             btnOptionsStation5.TabIndex = 19;
@@ -1478,7 +1827,7 @@
             // btnSaveStation5
             // 
             btnSaveStation5.Font = new Font("Segoe UI", 10F);
-            btnSaveStation5.Location = new Point(8, 170);
+            btnSaveStation5.Location = new Point(8, 146);
             btnSaveStation5.Name = "btnSaveStation5";
             btnSaveStation5.Size = new Size(83, 30);
             btnSaveStation5.TabIndex = 14;
@@ -1520,7 +1869,7 @@
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 32F);
-            lblTitle.Location = new Point(345, 20);
+            lblTitle.Location = new Point(218, 9);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(415, 59);
             lblTitle.TabIndex = 23;
@@ -1532,18 +1881,438 @@
             // 
             label32.AutoSize = true;
             label32.Image = (Image)resources.GetObject("label32.Image");
-            label32.Location = new Point(869, 15);
+            label32.Location = new Point(328, 326);
             label32.MaximumSize = new Size(150, 82);
             label32.MinimumSize = new Size(150, 82);
             label32.Name = "label32";
             label32.Size = new Size(150, 82);
             label32.TabIndex = 24;
             // 
+            // gbStation9
+            // 
+            gbStation9.Controls.Add(btnConnect9);
+            gbStation9.Controls.Add(btnAuto9);
+            gbStation9.Controls.Add(btnDrive9);
+            gbStation9.Controls.Add(cbServer9);
+            gbStation9.Controls.Add(btnConnectStation9);
+            gbStation9.Controls.Add(btnEndRace9);
+            gbStation9.Controls.Add(btnManualStation9);
+            gbStation9.Controls.Add(btnOptionsStation9);
+            gbStation9.Controls.Add(btnHardStation9);
+            gbStation9.Controls.Add(btnToggleState9);
+            gbStation9.Controls.Add(btnMediumStation9);
+            gbStation9.Controls.Add(label2);
+            gbStation9.Controls.Add(btnEasyStation9);
+            gbStation9.Controls.Add(btnSaveStation9);
+            gbStation9.Controls.Add(label7);
+            gbStation9.Controls.Add(txtNameStation9);
+            gbStation9.Controls.Add(lblStation9);
+            gbStation9.Location = new Point(276, 71);
+            gbStation9.Name = "gbStation9";
+            gbStation9.Size = new Size(258, 224);
+            gbStation9.TabIndex = 69;
+            gbStation9.TabStop = false;
+            // 
+            // btnConnect9
+            // 
+            btnConnect9.Font = new Font("Segoe UI", 10F);
+            btnConnect9.Location = new Point(8, 182);
+            btnConnect9.Name = "btnConnect9";
+            btnConnect9.Size = new Size(83, 30);
+            btnConnect9.TabIndex = 73;
+            btnConnect9.Text = "CONNECT";
+            btnConnect9.UseVisualStyleBackColor = true;
+            btnConnect9.Click += btnConnect9_Click;
+            // 
+            // btnAuto9
+            // 
+            btnAuto9.Font = new Font("Segoe UI", 10F);
+            btnAuto9.Location = new Point(170, 182);
+            btnAuto9.Name = "btnAuto9";
+            btnAuto9.Size = new Size(82, 30);
+            btnAuto9.TabIndex = 72;
+            btnAuto9.Text = "AUTO";
+            btnAuto9.UseVisualStyleBackColor = true;
+            btnAuto9.Click += btnAuto9_Click;
+            // 
+            // btnDrive9
+            // 
+            btnDrive9.Font = new Font("Segoe UI", 10F);
+            btnDrive9.Location = new Point(99, 182);
+            btnDrive9.Name = "btnDrive9";
+            btnDrive9.Size = new Size(65, 30);
+            btnDrive9.TabIndex = 71;
+            btnDrive9.Text = "DRIVE";
+            btnDrive9.UseVisualStyleBackColor = true;
+            btnDrive9.Click += btnDrive9_Click;
+            // 
+            // cbServer9
+            // 
+            cbServer9.FormattingEnabled = true;
+            cbServer9.Location = new Point(81, 110);
+            cbServer9.Name = "cbServer9";
+            cbServer9.Size = new Size(150, 23);
+            cbServer9.TabIndex = 62;
+            // 
+            // btnConnectStation9
+            // 
+            btnConnectStation9.Font = new Font("Segoe UI", 10F);
+            btnConnectStation9.Location = new Point(170, 146);
+            btnConnectStation9.Name = "btnConnectStation9";
+            btnConnectStation9.Size = new Size(83, 30);
+            btnConnectStation9.TabIndex = 68;
+            btnConnectStation9.Text = "UNIRSE";
+            btnConnectStation9.UseVisualStyleBackColor = true;
+            btnConnectStation9.Click += btnConnectStation9_Click;
+            // 
+            // btnEndRace9
+            // 
+            btnEndRace9.BackColor = Color.White;
+            btnEndRace9.BackgroundImage = (Image)resources.GetObject("btnEndRace9.BackgroundImage");
+            btnEndRace9.Location = new Point(99, 146);
+            btnEndRace9.Name = "btnEndRace9";
+            btnEndRace9.Size = new Size(30, 30);
+            btnEndRace9.TabIndex = 61;
+            btnEndRace9.UseVisualStyleBackColor = false;
+            btnEndRace9.Click += btnEndRace9_Click;
+            // 
+            // btnManualStation9
+            // 
+            btnManualStation9.BackColor = Color.FromArgb(255, 192, 192);
+            btnManualStation9.Location = new Point(185, 15);
+            btnManualStation9.Name = "btnManualStation9";
+            btnManualStation9.Size = new Size(30, 30);
+            btnManualStation9.TabIndex = 43;
+            btnManualStation9.UseVisualStyleBackColor = false;
+            btnManualStation9.Click += btnManualStation9_Click;
+            // 
+            // btnOptionsStation9
+            // 
+            btnOptionsStation9.Font = new Font("Segoe UI", 10F);
+            btnOptionsStation9.Image = (Image)resources.GetObject("btnOptionsStation9.Image");
+            btnOptionsStation9.Location = new Point(134, 146);
+            btnOptionsStation9.Name = "btnOptionsStation9";
+            btnOptionsStation9.Size = new Size(30, 30);
+            btnOptionsStation9.TabIndex = 23;
+            btnOptionsStation9.UseVisualStyleBackColor = true;
+            btnOptionsStation9.Click += btnOptionsStation9_Click;
+            // 
+            // btnHardStation9
+            // 
+            btnHardStation9.BackColor = Color.FromArgb(255, 224, 192);
+            btnHardStation9.Location = new Point(149, 15);
+            btnHardStation9.Name = "btnHardStation9";
+            btnHardStation9.Size = new Size(30, 30);
+            btnHardStation9.TabIndex = 42;
+            btnHardStation9.UseVisualStyleBackColor = false;
+            btnHardStation9.Click += btnHardStation9_Click;
+            // 
+            // btnToggleState9
+            // 
+            btnToggleState9.BackColor = Color.FromArgb(255, 128, 128);
+            btnToggleState9.Image = (Image)resources.GetObject("btnToggleState9.Image");
+            btnToggleState9.Location = new Point(222, 15);
+            btnToggleState9.Name = "btnToggleState9";
+            btnToggleState9.Size = new Size(30, 30);
+            btnToggleState9.TabIndex = 18;
+            btnToggleState9.UseVisualStyleBackColor = false;
+            btnToggleState9.Click += btnToggleState9_Click;
+            // 
+            // btnMediumStation9
+            // 
+            btnMediumStation9.BackColor = Color.FromArgb(255, 255, 192);
+            btnMediumStation9.Location = new Point(113, 15);
+            btnMediumStation9.Name = "btnMediumStation9";
+            btnMediumStation9.Size = new Size(30, 30);
+            btnMediumStation9.TabIndex = 41;
+            btnMediumStation9.UseVisualStyleBackColor = false;
+            btnMediumStation9.Click += btnMediumStation9_Click;
+            // 
+            // label2
+            // 
+            label2.Anchor = AnchorStyles.Top;
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 10F);
+            label2.Location = new Point(21, 111);
+            label2.Name = "label2";
+            label2.Size = new Size(58, 19);
+            label2.TabIndex = 16;
+            label2.Text = "SERVER:";
+            // 
+            // btnEasyStation9
+            // 
+            btnEasyStation9.BackColor = Color.FromArgb(192, 255, 192);
+            btnEasyStation9.Location = new Point(77, 15);
+            btnEasyStation9.Name = "btnEasyStation9";
+            btnEasyStation9.Size = new Size(30, 30);
+            btnEasyStation9.TabIndex = 40;
+            btnEasyStation9.UseVisualStyleBackColor = false;
+            btnEasyStation9.Click += btnEasyStation9_Click;
+            // 
+            // btnSaveStation9
+            // 
+            btnSaveStation9.Font = new Font("Segoe UI", 10F);
+            btnSaveStation9.Location = new Point(8, 146);
+            btnSaveStation9.Name = "btnSaveStation9";
+            btnSaveStation9.Size = new Size(83, 30);
+            btnSaveStation9.TabIndex = 14;
+            btnSaveStation9.Text = "GUARDAR";
+            btnSaveStation9.UseVisualStyleBackColor = true;
+            btnSaveStation9.Click += btnSaveStation9_Click;
+            // 
+            // label7
+            // 
+            label7.Anchor = AnchorStyles.Top;
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 10F);
+            label7.Location = new Point(10, 74);
+            label7.Name = "label7";
+            label7.Size = new Size(69, 19);
+            label7.TabIndex = 13;
+            label7.Text = "NOMBRE:";
+            // 
+            // txtNameStation9
+            // 
+            txtNameStation9.BorderStyle = BorderStyle.FixedSingle;
+            txtNameStation9.Location = new Point(81, 72);
+            txtNameStation9.Name = "txtNameStation9";
+            txtNameStation9.Size = new Size(150, 23);
+            txtNameStation9.TabIndex = 12;
+            // 
+            // lblStation9
+            // 
+            lblStation9.Anchor = AnchorStyles.Top;
+            lblStation9.AutoSize = true;
+            lblStation9.Font = new Font("Segoe UI", 12F);
+            lblStation9.Location = new Point(4, 20);
+            lblStation9.Name = "lblStation9";
+            lblStation9.Size = new Size(70, 21);
+            lblStation9.TabIndex = 0;
+            lblStation9.Text = "Puesto 9";
+            lblStation9.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // label11
+            // 
+            label11.Anchor = AnchorStyles.Top;
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 12F);
+            label11.Location = new Point(302, 450);
+            label11.Name = "label11";
+            label11.Size = new Size(78, 21);
+            label11.TabIndex = 70;
+            label11.Text = "SERVER 1";
+            // 
+            // btnConnect1Global
+            // 
+            btnConnect1Global.Font = new Font("Segoe UI", 10F);
+            btnConnect1Global.Location = new Point(381, 446);
+            btnConnect1Global.Name = "btnConnect1Global";
+            btnConnect1Global.Size = new Size(83, 30);
+            btnConnect1Global.TabIndex = 71;
+            btnConnect1Global.Text = "UNIRSE";
+            btnConnect1Global.UseVisualStyleBackColor = true;
+            btnConnect1Global.Click += btnConnect1Global_Click;
+            // 
+            // btnEndRace1Global
+            // 
+            btnEndRace1Global.BackColor = Color.White;
+            btnEndRace1Global.BackgroundImage = (Image)resources.GetObject("btnEndRace1Global.BackgroundImage");
+            btnEndRace1Global.Location = new Point(470, 446);
+            btnEndRace1Global.Name = "btnEndRace1Global";
+            btnEndRace1Global.Size = new Size(30, 30);
+            btnEndRace1Global.TabIndex = 72;
+            btnEndRace1Global.UseVisualStyleBackColor = false;
+            btnEndRace1Global.Click += btnEndRace1Global_Click;
+            // 
+            // btnEndRace2Global
+            // 
+            btnEndRace2Global.BackColor = Color.White;
+            btnEndRace2Global.BackgroundImage = (Image)resources.GetObject("btnEndRace2Global.BackgroundImage");
+            btnEndRace2Global.Location = new Point(470, 484);
+            btnEndRace2Global.Name = "btnEndRace2Global";
+            btnEndRace2Global.Size = new Size(30, 30);
+            btnEndRace2Global.TabIndex = 75;
+            btnEndRace2Global.UseVisualStyleBackColor = false;
+            btnEndRace2Global.Click += btnEndRace2Global_Click;
+            // 
+            // btnConnect2Global
+            // 
+            btnConnect2Global.Font = new Font("Segoe UI", 10F);
+            btnConnect2Global.Location = new Point(381, 484);
+            btnConnect2Global.Name = "btnConnect2Global";
+            btnConnect2Global.Size = new Size(83, 30);
+            btnConnect2Global.TabIndex = 74;
+            btnConnect2Global.Text = "UNIRSE";
+            btnConnect2Global.UseVisualStyleBackColor = true;
+            btnConnect2Global.Click += btnConnect2Global_Click;
+            // 
+            // label15
+            // 
+            label15.Anchor = AnchorStyles.Top;
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 12F);
+            label15.Location = new Point(302, 488);
+            label15.Name = "label15";
+            label15.Size = new Size(78, 21);
+            label15.TabIndex = 73;
+            label15.Text = "SERVER 2";
+            // 
+            // btnEndRace3Global
+            // 
+            btnEndRace3Global.BackColor = Color.White;
+            btnEndRace3Global.BackgroundImage = (Image)resources.GetObject("btnEndRace3Global.BackgroundImage");
+            btnEndRace3Global.Location = new Point(470, 520);
+            btnEndRace3Global.Name = "btnEndRace3Global";
+            btnEndRace3Global.Size = new Size(30, 30);
+            btnEndRace3Global.TabIndex = 78;
+            btnEndRace3Global.UseVisualStyleBackColor = false;
+            btnEndRace3Global.Click += btnEndRace3Global_Click;
+            // 
+            // btnConnect3Global
+            // 
+            btnConnect3Global.Font = new Font("Segoe UI", 10F);
+            btnConnect3Global.Location = new Point(381, 520);
+            btnConnect3Global.Name = "btnConnect3Global";
+            btnConnect3Global.Size = new Size(83, 30);
+            btnConnect3Global.TabIndex = 77;
+            btnConnect3Global.Text = "UNIRSE";
+            btnConnect3Global.UseVisualStyleBackColor = true;
+            btnConnect3Global.Click += btnConnect3Global_Click;
+            // 
+            // label19
+            // 
+            label19.Anchor = AnchorStyles.Top;
+            label19.AutoSize = true;
+            label19.Font = new Font("Segoe UI", 12F);
+            label19.Location = new Point(302, 524);
+            label19.Name = "label19";
+            label19.Size = new Size(78, 21);
+            label19.TabIndex = 76;
+            label19.Text = "SERVER 3";
+            // 
+            // btnEndRace4Global
+            // 
+            btnEndRace4Global.BackColor = Color.White;
+            btnEndRace4Global.BackgroundImage = (Image)resources.GetObject("btnEndRace4Global.BackgroundImage");
+            btnEndRace4Global.Location = new Point(470, 556);
+            btnEndRace4Global.Name = "btnEndRace4Global";
+            btnEndRace4Global.Size = new Size(30, 30);
+            btnEndRace4Global.TabIndex = 81;
+            btnEndRace4Global.UseVisualStyleBackColor = false;
+            btnEndRace4Global.Click += btnEndRace4Global_Click;
+            // 
+            // btnConnect4Global
+            // 
+            btnConnect4Global.Font = new Font("Segoe UI", 10F);
+            btnConnect4Global.Location = new Point(381, 556);
+            btnConnect4Global.Name = "btnConnect4Global";
+            btnConnect4Global.Size = new Size(83, 30);
+            btnConnect4Global.TabIndex = 80;
+            btnConnect4Global.Text = "UNIRSE";
+            btnConnect4Global.UseVisualStyleBackColor = true;
+            btnConnect4Global.Click += btnConnect4Global_Click;
+            // 
+            // label23
+            // 
+            label23.Anchor = AnchorStyles.Top;
+            label23.AutoSize = true;
+            label23.Font = new Font("Segoe UI", 12F);
+            label23.Location = new Point(302, 560);
+            label23.Name = "label23";
+            label23.Size = new Size(78, 21);
+            label23.TabIndex = 79;
+            label23.Text = "SERVER 4";
+            // 
+            // btnEndRace5Global
+            // 
+            btnEndRace5Global.BackColor = Color.White;
+            btnEndRace5Global.BackgroundImage = (Image)resources.GetObject("btnEndRace5Global.BackgroundImage");
+            btnEndRace5Global.Location = new Point(470, 592);
+            btnEndRace5Global.Name = "btnEndRace5Global";
+            btnEndRace5Global.Size = new Size(30, 30);
+            btnEndRace5Global.TabIndex = 84;
+            btnEndRace5Global.UseVisualStyleBackColor = false;
+            btnEndRace5Global.Click += btnEndRace5Global_Click;
+            // 
+            // btnConnect5Global
+            // 
+            btnConnect5Global.Font = new Font("Segoe UI", 10F);
+            btnConnect5Global.Location = new Point(381, 592);
+            btnConnect5Global.Name = "btnConnect5Global";
+            btnConnect5Global.Size = new Size(83, 30);
+            btnConnect5Global.TabIndex = 83;
+            btnConnect5Global.Text = "UNIRSE";
+            btnConnect5Global.UseVisualStyleBackColor = true;
+            btnConnect5Global.Click += btnConnect5Global_Click;
+            // 
+            // label27
+            // 
+            label27.Anchor = AnchorStyles.Top;
+            label27.AutoSize = true;
+            label27.Font = new Font("Segoe UI", 12F);
+            label27.Location = new Point(302, 596);
+            label27.Name = "label27";
+            label27.Size = new Size(78, 21);
+            label27.TabIndex = 82;
+            label27.Text = "SERVER 5";
+            // 
+            // btnEndRace6Global
+            // 
+            btnEndRace6Global.BackColor = Color.White;
+            btnEndRace6Global.BackgroundImage = (Image)resources.GetObject("btnEndRace6Global.BackgroundImage");
+            btnEndRace6Global.Location = new Point(470, 628);
+            btnEndRace6Global.Name = "btnEndRace6Global";
+            btnEndRace6Global.Size = new Size(30, 30);
+            btnEndRace6Global.TabIndex = 87;
+            btnEndRace6Global.UseVisualStyleBackColor = false;
+            btnEndRace6Global.Click += btnEndRace6Global_Click;
+            // 
+            // btnConnect6Global
+            // 
+            btnConnect6Global.Font = new Font("Segoe UI", 10F);
+            btnConnect6Global.Location = new Point(381, 628);
+            btnConnect6Global.Name = "btnConnect6Global";
+            btnConnect6Global.Size = new Size(83, 30);
+            btnConnect6Global.TabIndex = 86;
+            btnConnect6Global.Text = "UNIRSE";
+            btnConnect6Global.UseVisualStyleBackColor = true;
+            btnConnect6Global.Click += btnConnect6Global_Click;
+            // 
+            // label31
+            // 
+            label31.Anchor = AnchorStyles.Top;
+            label31.AutoSize = true;
+            label31.Font = new Font("Segoe UI", 12F);
+            label31.Location = new Point(302, 632);
+            label31.Name = "label31";
+            label31.Size = new Size(78, 21);
+            label31.TabIndex = 85;
+            label31.Text = "SERVER 6";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1084, 611);
+            ClientSize = new Size(811, 998);
+            Controls.Add(btnEndRace6Global);
+            Controls.Add(btnConnect6Global);
+            Controls.Add(label31);
+            Controls.Add(btnEndRace5Global);
+            Controls.Add(btnConnect5Global);
+            Controls.Add(label27);
+            Controls.Add(btnEndRace4Global);
+            Controls.Add(btnConnect4Global);
+            Controls.Add(label23);
+            Controls.Add(btnEndRace3Global);
+            Controls.Add(btnConnect3Global);
+            Controls.Add(label19);
+            Controls.Add(btnEndRace2Global);
+            Controls.Add(btnConnect2Global);
+            Controls.Add(label15);
+            Controls.Add(btnEndRace1Global);
+            Controls.Add(btnConnect1Global);
+            Controls.Add(label11);
+            Controls.Add(gbStation9);
             Controls.Add(label32);
             Controls.Add(lblTitle);
             Controls.Add(gbStation8);
@@ -1556,6 +2325,7 @@
             Controls.Add(gbStation1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Server Manager";
             Load += Form1_Load;
             gbStation1.ResumeLayout(false);
@@ -1574,6 +2344,8 @@
             gbStation6.PerformLayout();
             gbStation5.ResumeLayout(false);
             gbStation5.PerformLayout();
+            gbStation9.ResumeLayout(false);
+            gbStation9.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1716,5 +2488,65 @@
         private ComboBox cbServer5;
         private ComboBox cbServer4;
         private ComboBox cbServer8;
+        private GroupBox gbStation9;
+        private ComboBox cbServer9;
+        private Button btnConnectStation9;
+        private Button btnEndRace9;
+        private Button btnManualStation9;
+        private Button btnOptionsStation9;
+        private Button btnHardStation9;
+        private Button btnToggleState9;
+        private Button btnMediumStation9;
+        private Label label2;
+        private Button btnEasyStation9;
+        private Button btnSaveStation9;
+        private Label label7;
+        private TextBox txtNameStation9;
+        private Label lblStation9;
+        private Button btnAuto1;
+        private Button btnDrive1;
+        private Button btnAuto2;
+        private Button btnDrive2;
+        private Button btnAuto3;
+        private Button btnDrive3;
+        private Button btnAuto4;
+        private Button btnDrive4;
+        private Button btnAuto8;
+        private Button btnDrive8;
+        private Button btnAuto7;
+        private Button btnDrive7;
+        private Button btnAuto6;
+        private Button btnDrive6;
+        private Button btnAuto5;
+        private Button btnDrive5;
+        private Button btnAuto9;
+        private Button btnDrive9;
+        private Button btnConnect1;
+        private Button btnConnect2;
+        private Button btnConnect3;
+        private Button btnConnect4;
+        private Button btnConnect8;
+        private Button btnConnect7;
+        private Button btnConnect6;
+        private Button btnConnect5;
+        private Button btnConnect9;
+        private Label label11;
+        private Button btnConnect1Global;
+        private Button btnEndRace1Global;
+        private Button btnEndRace2Global;
+        private Button btnConnect2Global;
+        private Label label15;
+        private Button btnEndRace3Global;
+        private Button btnConnect3Global;
+        private Label label19;
+        private Button btnEndRace4Global;
+        private Button btnConnect4Global;
+        private Label label23;
+        private Button btnEndRace5Global;
+        private Button btnConnect5Global;
+        private Label label27;
+        private Button btnEndRace6Global;
+        private Button btnConnect6Global;
+        private Label label31;
     }
 }

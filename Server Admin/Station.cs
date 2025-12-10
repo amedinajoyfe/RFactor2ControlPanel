@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -80,6 +81,7 @@ namespace Server_Admin
             Nick = "Jugador";
         }
 
+        // Set sation difficulty, used by passing a previously configured station 
         public void CopyStationDifficulty(Station stationToCopy)
         {
             SteeringHelp = stationToCopy.SteeringHelp;
@@ -93,6 +95,8 @@ namespace Server_Admin
             OppositeLock = stationToCopy.OppositeLock;
         }
 
+        #region Request functions
+        // Open and close game
         public async Task<bool> SendToggleRequest()
         {
             try
@@ -135,6 +139,7 @@ namespace Server_Admin
             }
         }
 
+        // Set station settings
         public async Task<bool> SendSaveRequest()
         {
             if (IsAlive)
@@ -193,6 +198,7 @@ namespace Server_Admin
             }
         }
 
+        // Join server
         public async Task<bool> SendJoinRequest()
         {
             if (!IsAlive)
@@ -238,6 +244,189 @@ namespace Server_Admin
             }
         }
 
+        // Join server global
+        public async Task<bool> SendJoinRequestGlobal()
+        {
+            try
+            {
+                string[] serverData = IP.Split(':');
+                string server = serverData[0];
+                string[] multiServerData = Server.Split(':');
+                string multiServer = multiServerData[0];
+                string multiPort = multiServerData[1];
+                string url = $"http://{server}:5397/rest/multiplayer/join?host={multiServer}&port={multiPort}";
+
+
+                using (var client = new HttpClient())
+                {
+                    // Ver como te conectas con la api
+                    HttpResponseMessage response = await client.GetAsync(url);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string responseBody = await response.Content.ReadAsStringAsync();
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                        return false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+                return false;
+            }
+        }
+
+        // Activate AI driving
+        public async Task<bool> SendAutoDriveRequest()
+        {
+            if (!IsAlive)
+            {
+                MessageBox.Show("Encienda la máquina antes");
+                return false;
+            }
+            else if (Name == "Jugador" && Nick == "Jugador")
+            {
+                MessageBox.Show("Introduzca datos para la máquina");
+                return false;
+            }
+            try
+            {
+                string[] serverData = IP.Split(':');
+                string server = serverData[0];
+                string port = serverData[1];
+                string url = $"http://{server}:{port}/autodrive";
+
+
+                using (var client = new HttpClient())
+                {
+                    // Ver como te conectas con la api
+                    HttpResponseMessage response = await client.PostAsync(url, null);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string responseBody = await response.Content.ReadAsStringAsync();
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                        return false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                string[] serverData = IP.Split(':');
+                string server = serverData[0];
+                string port = serverData[1];
+                string url = $"http://{server}:{port}/autodrive";
+                Console.WriteLine($"Exception: {ex.Message} in url " + url);
+                return false;
+            }
+        }
+
+        // Enter race
+        public async Task<bool> SendDriveRequest()
+        {
+            if (!IsAlive)
+            {
+                MessageBox.Show("Encienda la máquina antes");
+                return false;
+            }
+            else if (Name == "Jugador" && Nick == "Jugador")
+            {
+                MessageBox.Show("Introduzca datos para la máquina");
+                return false;
+            }
+            try
+            {
+                string[] serverData = IP.Split(':');
+                string server = serverData[0];
+                string[] multiServerData = Server.Split(':');
+                string url = $"http://{server}:5397/navigation/action/NAV_TO_REALTIME";
+
+
+                using (var client = new HttpClient())
+                {
+                    // Ver como te conectas con la api
+                    HttpResponseMessage response = await client.PostAsync(url, null);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string responseBody = await response.Content.ReadAsStringAsync();
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                        return false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+                return false;
+            }
+        }
+
+        // Enter vehicle selection
+        public async Task<bool> SendDriveMultiplayerRequest()
+        {
+            if (!IsAlive)
+            {
+                MessageBox.Show("Encienda la máquina antes");
+                return false;
+            }
+            else if (Name == "Jugador" && Nick == "Jugador")
+            {
+                MessageBox.Show("Introduzca datos para la máquina");
+                return false;
+            }
+
+            try
+            {
+                string[] serverData = IP.Split(':');
+                string server = serverData[0];
+                string port = serverData[1];
+                string url = $"http://{server}:{port}/click";
+
+                // JSON body with coordinates
+                Dictionary<string, object> body = new Dictionary<string, object>()
+                {
+                    { "x", 3080 },
+                    { "y", 540 }
+                };
+                string json = JsonSerializer.Serialize(body);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                using (var client = new HttpClient())
+                {
+                    HttpResponseMessage response = await client.PostAsync(url, content);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string responseBody = await response.Content.ReadAsStringAsync();
+                        Console.WriteLine($"Click response: {responseBody}");
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                        return false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+                return false;
+            }
+        }
+
+        // Get station data
         public async Task SendGetRequest()
         {
             try
@@ -271,6 +460,7 @@ namespace Server_Admin
             }
         }
 
+        // Finish race and go back to server info screen
         public async Task SendFinishRaceRequest()
         {
             try
@@ -298,6 +488,6 @@ namespace Server_Admin
                 Console.WriteLine($"Exception: {ex.Message}");
             }
         }
-
+        #endregion
     }
 }

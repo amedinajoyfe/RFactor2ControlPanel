@@ -1,10 +1,6 @@
 from flask import Flask, request, jsonify
-import os
-import subprocess
-import json
-import requests
+import os, subprocess, json, requests, pydirectinput, time
 app = Flask(__name__)
-
 
 @app.route('/get_file', methods=['GET'])
 def get_file():
@@ -115,6 +111,31 @@ def close_game():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+@app.route('/autodrive', methods=['POST'])
+def autodrive():
+    try:
+        pydirectinput.press('i')
+        return jsonify({"result": "success", "message": "Autodrive toggled succesfully"}), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/click', methods=['POST'])
+def click_endpoint():
+    try:
+        data = request.get_json()
+        x = data.get('x')
+        y = data.get('y')
+
+        if x is None or y is None:
+            return jsonify({"error": "Missing x or y parameter"}), 400
+
+        pydirectinput.moveTo(x, y)
+        pydirectinput.click()
+
+        return jsonify({"result": "success", "message": "Car selection screen reached successfully"}), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

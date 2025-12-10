@@ -711,7 +711,6 @@ C:\Users\alexm\Documents\GitHub\RFactor2ControlPanel\Server Admin\bin\Release\ne
 C:\Users\alexm\Documents\GitHub\RFactor2ControlPanel\Server Admin\bin\Release\net8.0-windows\win-x86\hostfxr.dll
 C:\Users\alexm\Documents\GitHub\RFactor2ControlPanel\Server Admin\bin\Release\net8.0-windows\win-x86\hostpolicy.dll
 C:\Users\alexm\Documents\GitHub\RFactor2ControlPanel\Server Admin\bin\Release\net8.0-windows\win-x86\mscordaccore.dll
-C:\Users\alexm\Documents\GitHub\RFactor2ControlPanel\Server Admin\bin\Release\net8.0-windows\win-x86\mscordaccore_x86_x86_8.0.724.31311.dll
 C:\Users\alexm\Documents\GitHub\RFactor2ControlPanel\Server Admin\bin\Release\net8.0-windows\win-x86\mscordbi.dll
 C:\Users\alexm\Documents\GitHub\RFactor2ControlPanel\Server Admin\bin\Release\net8.0-windows\win-x86\mscorrc.dll
 C:\Users\alexm\Documents\GitHub\RFactor2ControlPanel\Server Admin\bin\Release\net8.0-windows\win-x86\msquic.dll
@@ -956,3 +955,4 @@ C:\Users\alexm\Documents\GitHub\RFactor2ControlPanel\Server Admin\obj\Release\ne
 C:\Users\alexm\Documents\GitHub\RFactor2ControlPanel\Server Admin\obj\Release\net8.0-windows\win-x86\Server Admin.pdb
 C:\Users\alexm\Documents\GitHub\RFactor2ControlPanel\Server Admin\obj\Release\net8.0-windows\win-x86\Server Admin.genruntimeconfig.cache
 C:\Users\alexm\Documents\GitHub\RFactor2ControlPanel\Server Admin\obj\Release\net8.0-windows\win-x86\ref\Server Admin.dll
+C:\Users\alexm\Documents\GitHub\RFactor2ControlPanel\Server Admin\bin\Release\net8.0-windows\win-x86\mscordaccore_x86_x86_8.0.2025.41914.dll

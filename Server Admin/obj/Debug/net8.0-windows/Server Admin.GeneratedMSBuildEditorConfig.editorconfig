@@ -17,3 +17,6 @@ build_property.RootNamespace = Server_Admin
 build_property.ProjectDir = C:\Users\alexm\Documents\GitHub\RFactor2ControlPanel\Server Admin\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 

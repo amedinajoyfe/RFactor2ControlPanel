@@ -20,6 +20,7 @@ namespace Server_Admin
         private Station station6;
         private Station station7;
         private Station station8;
+        private Station station9;
 
         private Dictionary<string, string> machines;
         private Dictionary<string, string> servers;
@@ -43,6 +44,7 @@ namespace Server_Admin
 
         }
 
+        #region Save station buttons (Saves station data to data file)
         private async void btnSaveStation1_Click(object sender, EventArgs e)
         {
             string selectedServer = cbServer1.SelectedValue?.ToString() ?? null;
@@ -52,7 +54,6 @@ namespace Server_Admin
             saveStations();
             await station1.SendSaveRequest();
         }
-
         private async void btnSaveStation2_Click(object sender, EventArgs e)
         {
             string selectedServer = cbServer2.SelectedValue?.ToString() ?? null;
@@ -62,7 +63,6 @@ namespace Server_Admin
             saveStations();
             await station2.SendSaveRequest();
         }
-
         private async void btnSaveStation3_Click(object sender, EventArgs e)
         {
             string selectedServer = cbServer3.SelectedValue?.ToString() ?? null;
@@ -72,7 +72,6 @@ namespace Server_Admin
             saveStations();
             await station3.SendSaveRequest();
         }
-
         private async void btnSaveStation4_Click(object sender, EventArgs e)
         {
             string selectedServer = cbServer4.SelectedValue?.ToString() ?? null;
@@ -82,7 +81,6 @@ namespace Server_Admin
             saveStations();
             await station4.SendSaveRequest();
         }
-
         private async void btnSaveStation5_Click(object sender, EventArgs e)
         {
             string selectedServer = cbServer5.SelectedValue?.ToString() ?? null;
@@ -92,7 +90,6 @@ namespace Server_Admin
             saveStations();
             await station5.SendSaveRequest();
         }
-
         private async void btnSaveStation6_Click(object sender, EventArgs e)
         {
             string selectedServer = cbServer6.SelectedValue?.ToString() ?? null;
@@ -102,7 +99,6 @@ namespace Server_Admin
             saveStations();
             await station6.SendSaveRequest();
         }
-
         private async void btnSaveStation7_Click(object sender, EventArgs e)
         {
             string selectedServer = cbServer7.SelectedValue?.ToString() ?? null;
@@ -112,7 +108,6 @@ namespace Server_Admin
             saveStations();
             await station7.SendSaveRequest();
         }
-
         private async void btnSaveStation8_Click(object sender, EventArgs e)
         {
             string selectedServer = cbServer8.SelectedValue?.ToString() ?? null;
@@ -122,7 +117,18 @@ namespace Server_Admin
             saveStations();
             await station8.SendSaveRequest();
         }
+        private async void btnSaveStation9_Click(object sender, EventArgs e)
+        {
+            string selectedServer = cbServer9.SelectedValue?.ToString() ?? null;
+            station9.Server = selectedServer;
+            station9.Name = txtNameStation9.Text;
+            station9.Nick = txtNameStation9.Text;
+            saveStations();
+            await station9.SendSaveRequest();
+        }
+        #endregion
 
+        #region Custom options buttons (Unused)
         private void btnOptionsStation1_Click(object sender, EventArgs e)
         {
 
@@ -162,7 +168,13 @@ namespace Server_Admin
         {
 
         }
+        private void btnOptionsStation9_Click(object sender, EventArgs e)
+        {
 
+        }
+        #endregion
+
+        # region Toggle state buttons (Buttons to open and close the game)
         private async void btnToggleState1_Click(object sender, EventArgs e)
         {
             bool result = await station1.SendToggleRequest();
@@ -259,7 +271,20 @@ namespace Server_Admin
             }
         }
 
+        private async void btnToggleState9_Click(object sender, EventArgs e)
+        {
+            bool result = await station9.SendToggleRequest();
+            if (result)
+            {
+                if (station9.IsAlive)
+                    btnToggleState9.BackColor = Color.Lime;
+                else
+                    btnToggleState9.BackColor = Color.FromArgb(255, 128, 128);
+            }
+        }
+        #endregion
 
+        #region Difficulty buttons (Changes station difficulty)
         private void btnEasyStation1_Click(object sender, EventArgs e)
         {
             station1.CopyStationDifficulty(easyStation);
@@ -420,6 +445,28 @@ namespace Server_Admin
             station8.CopyStationDifficulty(manualStation);
         }
 
+        private void btnEasyStation9_Click(object sender, EventArgs e)
+        {
+            station9.CopyStationDifficulty(easyStation);
+        }
+
+        private void btnMediumStation9_Click(object sender, EventArgs e)
+        {
+            station9.CopyStationDifficulty(mediumStation);
+        }
+
+        private void btnHardStation9_Click(object sender, EventArgs e)
+        {
+            station9.CopyStationDifficulty(hardStation);
+        }
+
+        private void btnManualStation9_Click(object sender, EventArgs e)
+        {
+            station9.CopyStationDifficulty(manualStation);
+        }
+        #endregion
+
+        #region End buttons (End race and return to information screen)
         private async void btnEndRace1_Click(object sender, EventArgs e)
         {
             saveStationConnections(station1, false);
@@ -468,6 +515,14 @@ namespace Server_Admin
             await station8.SendFinishRaceRequest();
         }
 
+        private async void btnEndRace9_Click(object sender, EventArgs e)
+        {
+            saveStationConnections(station9, false);
+            await station9.SendFinishRaceRequest();
+        }
+        #endregion
+
+        #region Game join buttons (Join stattion to a multiplayer game)
         private async void btnConnectStation1_Click(object sender, EventArgs e)
         {
             saveStationConnections(station1, true);
@@ -515,9 +570,158 @@ namespace Server_Admin
             saveStationConnections(station8, true);
             await station8.SendJoinRequest();
         }
+        private async void btnConnectStation9_Click(object sender, EventArgs e)
+        {
+            saveStationConnections(station9, true);
+            await station9.SendJoinRequest();
+        }
+        #endregion
+
+        # region Connect buttons (Multiplayer join modal with Drive button)
+        private async void btnConnect1_Click(object sender, EventArgs e)
+        {
+            await station1.SendDriveMultiplayerRequest();
+        }
+
+        private async void btnConnect2_Click(object sender, EventArgs e)
+        {
+            await station2.SendDriveMultiplayerRequest();
+        }
+
+        private async void btnConnect3_Click(object sender, EventArgs e)
+        {
+            await station3.SendDriveMultiplayerRequest();
+        }
+
+        private async void btnConnect4_Click(object sender, EventArgs e)
+        {
+            await station4.SendDriveMultiplayerRequest();
+        }
+
+        private async void btnConnect5_Click(object sender, EventArgs e)
+        {
+            await station5.SendDriveMultiplayerRequest();
+        }
+
+        private async void btnConnect6_Click(object sender, EventArgs e)
+        {
+            await station6.SendDriveMultiplayerRequest();
+        }
+
+        private async void btnConnect7_Click(object sender, EventArgs e)
+        {
+            await station7.SendDriveMultiplayerRequest();
+        }
+
+        private async void btnConnect8_Click(object sender, EventArgs e)
+        {
+            await station8.SendDriveMultiplayerRequest();
+        }
+
+        private async void btnConnect9_Click(object sender, EventArgs e)
+        {
+            await station9.SendDriveMultiplayerRequest();
+        }
+
+        private async void btnDrive1_Click(object sender, EventArgs e)
+        {
+            await station1.SendDriveRequest();
+        }
+
+        private async void btnDrive2_Click(object sender, EventArgs e)
+        {
+            await station2.SendDriveRequest();
+        }
+        #endregion
+
+        #region Drive buttons (Information screen with orange Drive button at the bottom)
+        private async void btnDrive3_Click(object sender, EventArgs e)
+        {
+            await station3.SendDriveRequest();
+        }
+
+        private async void btnDrive4_Click(object sender, EventArgs e)
+        {
+            await station4.SendDriveRequest();
+        }
+
+        private async void btnDrive5_Click(object sender, EventArgs e)
+        {
+            await station5.SendDriveRequest();
+        }
+
+        private async void btnDrive6_Click(object sender, EventArgs e)
+        {
+            await station6.SendDriveRequest();
+        }
+
+        private async void btnDrive7_Click(object sender, EventArgs e)
+        {
+            await station7.SendDriveRequest();
+        }
+
+        private async void btnDrive8_Click(object sender, EventArgs e)
+        {
+            await station8.SendDriveRequest();
+        }
+
+        private async void btnDrive9_Click(object sender, EventArgs e)
+        {
+            await station9.SendDriveRequest();
+        }
+        #endregion
+
+        #region Autodrive buttons (Sends request to enable AI help)
+        private async void btnAuto1_Click(object sender, EventArgs e)
+        {
+            await station1.SendAutoDriveRequest();
+        }
+
+        private async void btnAuto2_Click(object sender, EventArgs e)
+        {
+            await station2.SendAutoDriveRequest();
+        }
+
+        private async void btnAuto3_Click(object sender, EventArgs e)
+        {
+            await station3.SendAutoDriveRequest();
+        }
+
+        private async void btnAuto4_Click(object sender, EventArgs e)
+        {
+            await station4.SendAutoDriveRequest();
+        }
+
+        private async void btnAuto5_Click(object sender, EventArgs e)
+        {
+            await station5.SendAutoDriveRequest();
+        }
+
+        private async void btnAuto6_Click(object sender, EventArgs e)
+        {
+            await station6.SendAutoDriveRequest();
+        }
+
+        private async void btnAuto7_Click(object sender, EventArgs e)
+        {
+            await station7.SendAutoDriveRequest();
+        }
+
+        private async void btnAuto8_Click(object sender, EventArgs e)
+        {
+            await station8.SendAutoDriveRequest();
+        }
+
+        private async void btnAuto9_Click(object sender, EventArgs e)
+        {
+            await station9.SendAutoDriveRequest();
+        }
+        #endregion
+
+        #region Data saving functions
         private void saveStations()
         {
-            List<Station> stationList = new List<Station> { station1, station2, station3, station4, station5, station6, station7, station8 };
+            List<Station> stationList = new List<Station> { station1, station2, station3, station4, station5, station6, station7, station8, station9 };
             string jsonData = JsonSerializer.Serialize(stationList);
             string programFilesX86 = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
             string saveFolder = programFilesX86 + "\\rFactorServerAdmin";
@@ -544,7 +748,7 @@ namespace Server_Admin
 
             stationDict["DateAdded"] = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
-            if (start) 
+            if (start)
             {
                 stationDict["Action"] = "Start";
             }
@@ -569,6 +773,21 @@ namespace Server_Admin
             string jsonData = JsonSerializer.Serialize(stations);
             File.WriteAllText(filePath, jsonData);
         }
+        #endregion
+
+        #region Data loading functions
+        private void SetupComboBox(ComboBox serverComboBox, TextBox textBox, Station station)
+        {
+            serverComboBox.DataSource = new BindingSource(servers, null);
+            serverComboBox.DisplayMember = "Key";
+            serverComboBox.ValueMember = "Value";
+            if (station.Server != null)
+            {
+                serverComboBox.SelectedValue = station.Server;
+            }
+
+            textBox.Text = station.Name == "Jugador" ? "" : station.Name;
+        }
         private void loadStations()
         {
             string programFilesX86 = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
@@ -586,6 +805,7 @@ namespace Server_Admin
                 station6 = stationList[5];
                 station7 = stationList[6];
                 station8 = stationList[7];
+                station9 = stationList[8];
 
 
                 SetupComboBox(cbServer1, txtNameStation1, station1);
@@ -596,6 +816,7 @@ namespace Server_Admin
                 SetupComboBox(cbServer6, txtNameStation6, station6);
                 SetupComboBox(cbServer7, txtNameStation7, station7);
                 SetupComboBox(cbServer8, txtNameStation8, station8);
+                SetupComboBox(cbServer9, txtNameStation9, station9);
             }
             else
             {
@@ -607,22 +828,9 @@ namespace Server_Admin
                 station6 = new Station();
                 station7 = new Station();
                 station8 = new Station();
+                station9 = new Station();
             }
         }
-
-        private void SetupComboBox(ComboBox serverComboBox, TextBox textBox, Station station)
-        {
-            serverComboBox.DataSource = new BindingSource(servers, null);
-            serverComboBox.DisplayMember = "Key";
-            serverComboBox.ValueMember = "Value";
-            if(station.Server != null)
-            {
-                serverComboBox.SelectedValue = station.Server;
-            }
-
-            textBox.Text = station.Name == "Jugador" ? "" : station.Name;
-        }
-
         private void loadOptions()
         {
             string programFilesX86 = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
@@ -717,7 +925,7 @@ namespace Server_Admin
             {
                 using (StreamWriter sw = File.CreateText(saveFolder + "\\serverData.json"))
                 {
-                    sw.Write("{\r\n    \"Station 1\": \"192.84.12.1:5000\",\r\n    \"Station 2\": \"192.84.12.2:5000\",\r\n    \"Station 3\": \"192.84.12.3:5000\",\r\n    \"Station 4\": \"192.84.12.4:5000\"\r\n}");
+                    sw.Write("{\r\n    \"Server1\": \"192.84.12.1:5000\",\r\n    \"Server2\": \"192.84.12.2:5000\",\r\n    \"Server3\": \"192.84.12.3:5000\",\r\n    \"Server4\": \"192.84.12.4:5000\"\r\n,\r\n    \"Server5\": \"192.84.12.4:5000\"\r\n,\r\n    \"Server6\": \"192.84.12.4:5000\"\r\n}");
                 }
             }
         }
@@ -764,6 +972,9 @@ namespace Server_Admin
                             case 7:
                                 station8.IP = ip;
                                 break;
+                            case 8:
+                                station9.IP = ip;
+                                break;
                         }
                     }
                 }
@@ -772,9 +983,181 @@ namespace Server_Admin
             {
                 using (StreamWriter sw = File.CreateText(saveFolder + "\\machineData.json"))
                 {
-                    sw.Write("{\r\n    \"Station 1\": \"127.0.0.1:5000\",\r\n    \"Station 2\": \"192.84.12.2:5000\",\r\n    \"Station 3\": \"192.84.12.3:5000\",\r\n    \"Station 4\": \"192.84.12.3:5000\",\r\n    \"Station 5\": \"192.84.12.3:5000\",\r\n    \"Station 6\": \"192.84.12.3:5000\",\r\n    \"Station 7\": \"192.84.12.3:5000\",\r\n    \"Station 8\": \"192.84.12.4:5000\"\r\n}");
+                    sw.Write("{\r\n    \"Station 1\": \"127.0.0.1:5000\",\r\n    \"Station 2\": \"192.84.12.2:5000\",\r\n    \"Station 3\": \"192.84.12.3:5000\",\r\n    \"Station 4\": \"192.84.12.3:5000\",\r\n    \"Station 5\": \"192.84.12.3:5000\",\r\n    \"Station 6\": \"192.84.12.3:5000\",\r\n    \"Station 7\": \"192.84.12.3:5000\",\r\n    \"Station 8\": \"192.84.12.4:5000\"\r\n,\r\n    \"Station 9\": \"192.84.12.5:5000\"\r\n}");
                 }
             }
         }
+        #endregion
+
+        #region Global buttons
+
+        private async void btnConnect1Global_Click(object sender, EventArgs e)
+        {
+            if(servers.TryGetValue("Server1", out string address))
+            {
+                setAllStations(address);
+            }
+            else
+            {
+                MessageBox.Show("Configura la lista de servidores con los nombres sugeridos (Server[num])");
+            }
+            await connectAllStations();
+        }
+
+        private async void btnConnect2Global_Click(object sender, EventArgs e)
+        {
+            if (servers.TryGetValue("Server2", out string address))
+            {
+                setAllStations(address);
+            }
+            else
+            {
+                MessageBox.Show("Configura la lista de servidores con los nombres sugeridos (Server[num])");
+            }
+            await connectAllStations();
+        }
+
+        private async void btnConnect3Global_Click(object sender, EventArgs e)
+        {
+            if (servers.TryGetValue("Server3", out string address))
+            {
+                setAllStations(address);
+            }
+            else
+            {
+                MessageBox.Show("Configura la lista de servidores con los nombres sugeridos (Server[num])");
+            }
+            await connectAllStations();
+        }
+
+        private async void btnConnect4Global_Click(object sender, EventArgs e)
+        {
+            if (servers.TryGetValue("Server4", out string address))
+            {
+                setAllStations(address);
+            }
+            else
+            {
+                MessageBox.Show("Configura la lista de servidores con los nombres sugeridos (Server[num])");
+            }
+            await connectAllStations();
+        }
+
+        private async void btnConnect5Global_Click(object sender, EventArgs e)
+        {
+            if (servers.TryGetValue("Server5", out string address))
+            {
+                setAllStations(address);
+            }
+            else
+            {
+                MessageBox.Show("Configura la lista de servidores con los nombres sugeridos (Server[num])");
+            }
+            await connectAllStations();
+        }
+
+        private async void btnConnect6Global_Click(object sender, EventArgs e)
+        {
+            if (servers.TryGetValue("Server6", out string address))
+            {
+                setAllStations(address);
+            }
+            else
+            {
+                MessageBox.Show("Configura la lista de servidores con los nombres sugeridos (Server[num])");
+            }
+            await connectAllStations();
+        }
+
+        private async void btnEndRace1Global_Click(object sender, EventArgs e)
+        {
+            await endAllStations();
+        }
+
+        private async void btnEndRace2Global_Click(object sender, EventArgs e)
+        {
+            await endAllStations();
+        }
+
+        private async void btnEndRace3Global_Click(object sender, EventArgs e)
+        {
+            await endAllStations();
+        }
+
+        private async void btnEndRace4Global_Click(object sender, EventArgs e)
+        {
+            await endAllStations();
+        }
+
+        private async void btnEndRace5Global_Click(object sender, EventArgs e)
+        {
+            await endAllStations();
+        }
+
+        private async void btnEndRace6Global_Click(object sender, EventArgs e)
+        {
+            await endAllStations();
+        }
+
+        private void setAllStations(String server)
+        {
+            station1.Server = server;
+            station2.Server = server;
+            station3.Server = server;
+            station4.Server = server;
+            station5.Server = server;
+            station6.Server = server;
+            station7.Server = server;
+            station8.Server = server;
+            station9.Server = server;
+        }
+
+        // @TODO: Individual stations should be converted into an array or even a dictionary for easier reading and iteration
+        private async Task<bool> connectAllStations()
+        {
+            if (station1.IsAlive)
+                await station1.SendJoinRequest();
+            if (station2.IsAlive)
+                await station2.SendJoinRequest();
+            if (station3.IsAlive)
+                await station3.SendJoinRequest();
+            if (station4.IsAlive)
+                await station4.SendJoinRequest();
+            if (station5.IsAlive)
+                await station5.SendJoinRequest();
+            if (station6.IsAlive)
+                await station6.SendJoinRequest();
+            if (station7.IsAlive)
+                await station7.SendJoinRequest();
+            if (station8.IsAlive)
+                await station8.SendJoinRequest();
+            if (station9.IsAlive)
+                await station9.SendJoinRequest();
+            return true;
+        }
+
+        private async Task<bool> endAllStations()
+        {
+            if (station1.IsAlive)
+                await station1.SendFinishRaceRequest();
+            if (station2.IsAlive)
+                await station2.SendFinishRaceRequest();
+            if (station3.IsAlive)
+                await station3.SendFinishRaceRequest();
+            if (station4.IsAlive)
+                await station4.SendFinishRaceRequest();
+            if (station5.IsAlive)
+                await station5.SendFinishRaceRequest();
+            if (station6.IsAlive)
+                await station6.SendFinishRaceRequest();
+            if (station7.IsAlive)
+                await station7.SendFinishRaceRequest();
+            if (station8.IsAlive)
+                await station8.SendFinishRaceRequest();
+            if (station9.IsAlive)
+                await station9.SendFinishRaceRequest();
+            return true;
+        }
+        #endregion
     }
 }

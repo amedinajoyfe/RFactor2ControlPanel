@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "Server Admin\\Form1.cs",
               "ToolTip": "C:\\Users\\alexm\\Documents\\GitHub\\RFactor2ControlPanel\\Server Admin\\Form1.cs",
               "RelativeToolTip": "Server Admin\\Form1.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCUAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-12T17:43:15.331Z",
               "IsPinned": true,
@@ -64,7 +64,8 @@
               "RelativeToolTip": "Server Admin\\Form1.Designer.cs",
               "ViewState": "AgIAAIICAAAAAAAAAAAswJsCAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T14:50:23.354Z"
+              "WhenOpened": "2024-07-31T14:50:23.354Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -75,7 +76,8 @@
               "ToolTip": "C:\\Users\\alexm\\Documents\\GitHub\\RFactor2ControlPanel\\Server Admin\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "Server Admin\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T19:42:19.109Z"
+              "WhenOpened": "2025-10-07T19:42:19.109Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
@@ -100,7 +102,8 @@
               "RelativeToolTip": "Server Admin\\Form2.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T18:46:02.874Z"
+              "WhenOpened": "2024-08-28T18:46:02.874Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -111,7 +114,8 @@
               "ToolTip": "C:\\Users\\alexm\\Documents\\GitHub\\RFactor2ControlPanel\\Server Admin\\Form2.cs [Dise\u00F1o]",
               "RelativeToolTip": "Server Admin\\Form2.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T18:46:01.369Z"
+              "WhenOpened": "2024-08-28T18:46:01.369Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
@@ -123,7 +127,8 @@
               "RelativeToolTip": "Server Admin\\Station.cs",
               "ViewState": "AgIAAKUBAAAAAAAAAAAYwOsBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T18:46:39.004Z"
+              "WhenOpened": "2024-09-18T18:46:39.004Z",
+              "EditorCaption": ""
             }
           ]
         }
