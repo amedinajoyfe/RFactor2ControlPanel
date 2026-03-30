@@ -105,7 +105,6 @@ namespace Server_Admin
                 string server = serverData[0];
                 string port = serverData[1];
                 string url = $"http://{server}:{port}/";
-
                 // Para post
                 using (var client = new HttpClient())
                 {

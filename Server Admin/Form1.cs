@@ -797,26 +797,28 @@ namespace Server_Admin
                 string data = File.ReadAllText(saveFolder + "\\userData.json");
                 List<Station> stationList = JsonSerializer.Deserialize<List<Station>>(data);
 
-                station1 = stationList[0];
-                station2 = stationList[1];
-                station3 = stationList[2];
-                station4 = stationList[3];
-                station5 = stationList[4];
-                station6 = stationList[5];
-                station7 = stationList[6];
-                station8 = stationList[7];
-                station9 = stationList[8];
+                if(stationList != null)
+                {
+                    station1 = stationList.ElementAtOrDefault(0) ?? new Station();
+                    station2 = stationList.ElementAtOrDefault(1) ?? new Station();
+                    station3 = stationList.ElementAtOrDefault(2) ?? new Station();
+                    station4 = stationList.ElementAtOrDefault(3) ?? new Station();
+                    station5 = stationList.ElementAtOrDefault(4) ?? new Station();
+                    station6 = stationList.ElementAtOrDefault(5) ?? new Station();
+                    station7 = stationList.ElementAtOrDefault(6) ?? new Station();
+                    station8 = stationList.ElementAtOrDefault(7) ?? new Station();
+                    station9 = stationList.ElementAtOrDefault(8) ?? new Station();
 
-
-                SetupComboBox(cbServer1, txtNameStation1, station1);
-                SetupComboBox(cbServer2, txtNameStation2, station2);
-                SetupComboBox(cbServer3, txtNameStation3, station3);
-                SetupComboBox(cbServer4, txtNameStation4, station4);
-                SetupComboBox(cbServer5, txtNameStation5, station5);
-                SetupComboBox(cbServer6, txtNameStation6, station6);
-                SetupComboBox(cbServer7, txtNameStation7, station7);
-                SetupComboBox(cbServer8, txtNameStation8, station8);
-                SetupComboBox(cbServer9, txtNameStation9, station9);
+                    SetupComboBox(cbServer1, txtNameStation1, station1);
+                    SetupComboBox(cbServer2, txtNameStation2, station2);
+                    SetupComboBox(cbServer3, txtNameStation3, station3);
+                    SetupComboBox(cbServer4, txtNameStation4, station4);
+                    SetupComboBox(cbServer5, txtNameStation5, station5);
+                    SetupComboBox(cbServer6, txtNameStation6, station6);
+                    SetupComboBox(cbServer7, txtNameStation7, station7);
+                    SetupComboBox(cbServer8, txtNameStation8, station8);
+                    SetupComboBox(cbServer9, txtNameStation9, station9);
+                }
             }
             else
             {
@@ -941,7 +943,7 @@ namespace Server_Admin
             {
                 string data = File.ReadAllText(saveFolder + "\\machineData.json");
                 machines = JsonSerializer.Deserialize<Dictionary<string, string>>(data);
-                for (int i = 0; i < 8; i++)
+                for (int i = 0; i < 9; i++)
                 {
                     string key = "Station " + (i + 1);
                     if (machines.TryGetValue(key, out string ip))
@@ -993,80 +995,74 @@ namespace Server_Admin
 
         private async void btnConnect1Global_Click(object sender, EventArgs e)
         {
-            if(servers.TryGetValue("Server1", out string address))
+            if(servers.TryGetValue("Server 1", out string address))
             {
-                setAllStations(address);
+                await connectAllStations(address);
             }
             else
             {
-                MessageBox.Show("Configura la lista de servidores con los nombres sugeridos (Server[num])");
+                MessageBox.Show("Configura la lista de servidores con los nombres sugeridos (Server [num])");
             }
-            await connectAllStations();
         }
 
         private async void btnConnect2Global_Click(object sender, EventArgs e)
         {
-            if (servers.TryGetValue("Server2", out string address))
+            if (servers.TryGetValue("Server 2", out string address))
             {
-                setAllStations(address);
+                await connectAllStations(address);
             }
             else
             {
-                MessageBox.Show("Configura la lista de servidores con los nombres sugeridos (Server[num])");
+                MessageBox.Show("Configura la lista de servidores con los nombres sugeridos (Server [num])");
             }
-            await connectAllStations();
         }
 
         private async void btnConnect3Global_Click(object sender, EventArgs e)
         {
-            if (servers.TryGetValue("Server3", out string address))
+            if (servers.TryGetValue("Server 3", out string address))
             {
-                setAllStations(address);
+                await connectAllStations(address);
             }
             else
             {
-                MessageBox.Show("Configura la lista de servidores con los nombres sugeridos (Server[num])");
+                MessageBox.Show("Configura la lista de servidores con los nombres sugeridos (Server [num])");
             }
-            await connectAllStations();
         }
 
         private async void btnConnect4Global_Click(object sender, EventArgs e)
         {
-            if (servers.TryGetValue("Server4", out string address))
+            if (servers.TryGetValue("Server 4", out string address))
             {
-                setAllStations(address);
+                await connectAllStations(address);
             }
             else
             {
-                MessageBox.Show("Configura la lista de servidores con los nombres sugeridos (Server[num])");
+                MessageBox.Show("Configura la lista de servidores con los nombres sugeridos (Server [num])");
             }
-            await connectAllStations();
         }
 
         private async void btnConnect5Global_Click(object sender, EventArgs e)
         {
-            if (servers.TryGetValue("Server5", out string address))
+            if (servers.TryGetValue("Server 5", out string address))
             {
-                setAllStations(address);
+                await connectAllStations(address);
             }
             else
             {
-                MessageBox.Show("Configura la lista de servidores con los nombres sugeridos (Server[num])");
+                MessageBox.Show("Configura la lista de servidores con los nombres sugeridos (Server [num])");
             }
-            await connectAllStations();
         }
 
         private async void btnConnect6Global_Click(object sender, EventArgs e)
         {
-            if (servers.TryGetValue("Server6", out string address))
+            if (servers.TryGetValue("Server 6", out string address))
             {
-                setAllStations(address);
+                await connectAllStations(address);
             }
             else
             {
-                MessageBox.Show("Configura la lista de servidores con los nombres sugeridos (Server[num])");
+                MessageBox.Show("Configura la lista de servidores con los nombres sugeridos (Server [num])");
             }
-            await connectAllStations();
         }
 
         private async void btnEndRace1Global_Click(object sender, EventArgs e)
@@ -1113,26 +1109,59 @@ namespace Server_Admin
         }
 
         // @TODO: Individual stations should be converted into an array or even a dictionary for easier reading and iteration
-        private async Task<bool> connectAllStations()
+        private async Task<bool> connectAllStations(string address)
         {
-            if (station1.IsAlive)
+            bool connected = false;
+            if (station1.IsAlive && station1.Server.Equals(address))
+            {
                 await station1.SendJoinRequest();
-            if (station2.IsAlive)
+                connected = true;
+            }
+            if (station2.IsAlive && station2.Server.Equals(address))
+            {
                 await station2.SendJoinRequest();
-            if (station3.IsAlive)
+                connected = true;
+            }
+            if (station3.IsAlive && station3.Server.Equals(address))
+            {
                 await station3.SendJoinRequest();
-            if (station4.IsAlive)
+                connected = true;
+            }
+            if (station4.IsAlive && station4.Server.Equals(address))
+            {
                 await station4.SendJoinRequest();
-            if (station5.IsAlive)
+                connected = true;
+            }
+            if (station5.IsAlive && station5.Server.Equals(address))
+            {
                 await station5.SendJoinRequest();
-            if (station6.IsAlive)
+                connected = true;
+            }
+            if (station6.IsAlive && station6.Server.Equals(address))
+            {
                 await station6.SendJoinRequest();
-            if (station7.IsAlive)
+                connected = true;
+            }
+            if (station7.IsAlive && station7.Server.Equals(address))
+            {
                 await station7.SendJoinRequest();
-            if (station8.IsAlive)
+                connected = true;
+            }
+            if (station8.IsAlive && station8.Server.Equals(address))
+            {
                 await station8.SendJoinRequest();
-            if (station9.IsAlive)
+                connected = true;
+            }
+            if (station9.IsAlive && station9.Server.Equals(address))
+            {
                 await station9.SendJoinRequest();
+                connected = true;
+            }
+            if(!connected)
+            {
+                MessageBox.Show("No hay ordenadores configurados con ese servidor.");
+                return false;
+            }
             return true;
         }
 
